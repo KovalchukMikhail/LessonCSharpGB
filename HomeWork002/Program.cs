@@ -6,11 +6,6 @@ namespace HomeWork002
     {
         static void Main(string[] args)
         {
-            //byte byteNum = 7;
-            //short shortNum = 528;
-            //int intNum = 2100000000;
-            //long longNum = 3100000000;
-
             byte byteNum = 2;
             short shortNum = 4;
             int intNum = 8;
