@@ -26,7 +26,6 @@ namespace HomeWork004
             Array.Sort(numbers);
             int[] result = new int[3];
             int sizeForSearch = numbers.Length - 1;
-
             for (int i = 0; i < numbers.Length; i++)
             {
                 for (int j = i + 1; j < sizeForSearch; j++)
