@@ -136,20 +136,13 @@ namespace HomeWork007
                     string[] nameAndValue = values[i].Split(":");
                     if (nameAndValue[0] == "field")
                     {
-                        foreach(var field in fields)
+                        foreach (var property in properties)
                         {
-                            var fieldAttr = field?.GetCustomAttribute<CustomFieldNameAttribute>();
-                            if (fieldAttr != null && nameAndValue[1] == fieldAttr.Name)
+                            var propertyAttr = property?.GetCustomAttribute<CustomPropertyNameAttribute>();
+                            if(propertyAttr != null && nameAndValue[1] == propertyAttr.Name)
                             {
-                                foreach (var property in properties)
-                                {
-                                    var propertyAttr = property?.GetCustomAttribute<CustomPropertyNameAttribute>();
-                                    if(propertyAttr != null && nameAndValue[1] == propertyAttr.Name)
-                                    {
-                                        SetPropertyValue(property, obj, nameAndValue[2]);
-                                        break;
-                                    }
-                                }
+                                SetPropertyValue(property, obj, nameAndValue[2]);
+                                break;
                             }
                         }
                     }
