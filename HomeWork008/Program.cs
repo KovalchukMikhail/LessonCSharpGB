@@ -13,8 +13,7 @@
                 dir = args[0];
                 extension = args[1];
                 text = args[2];
-            }
-                
+            }  
             else if (args.Length == 2)
             {
                 dir = @"..\..\..\Text";
@@ -26,8 +25,6 @@
                 Console.WriteLine("Переданы некорректные параметры");
                 return;
             }
-
-
             if (!extension.StartsWith("."))
             {
                 extension = "." + extension;
